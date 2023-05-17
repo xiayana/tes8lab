@@ -1,0 +1,21 @@
+{
+"serverConfig":
+{
+	"bootstrapServers":"bigdata01:9092,bigdata02:9092",
+	"topic":"sandbox_hdfs_audit_log",
+	"groupId":"sys.userprofile.detection"
+},
+"bolthreads":
+  {
+  	"getfieldbolt":2,
+  	"dupfilterbolt":2,
+  	"tablemodelbolt":2,
+  	"usermodelbolt":2,
+  	"alertbolt":1
+  	},
+	"kafkaClient": {
+		"security": "org.apache.kafka.common.security.plain.PlainLoginModule",
+		"username": "8lab",
+		"password": "8lab"
+	}
+}

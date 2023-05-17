@@ -1,0 +1,32 @@
+{
+"serverConfig":
+  {
+	"bootstrapServers":"192.168.3.104:9092",
+	"topic":"sandbox_hdfs_audit_log",
+	"groupId":"sys.userprofile.detection"
+  },
+"bolthreads":
+  {
+  	"getfieldbolt":6,
+  	"dupfilterbolt":6,
+  	"servicemodelbolt":6,
+  	"heuristicbolt":6,
+  	"detectionbolt":6,
+  	"alertbolt":6
+  	},
+"topoConfig": {
+    "numWorkers": 6,
+    "numAckers": 0,
+    "spoutNumbers":6
+  },
+"kafkaOffset": {
+    "skipPercent": 7
+  },
+"kafkaClient": 
+  {
+        "status": "off",
+        "security": "org.apache.kafka.common.security.plain.PlainLoginModule",
+        "username": "8lab",
+        "password": "8lab"
+  }
+}
